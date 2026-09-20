@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#7751d6">
+  <title>SkyCast | Weather</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="weather-card" aria-labelledby="app-title">
+      <header class="topbar">
+        <a class="brand" href="./" aria-label="SkyCast home"><span class="brand-mark" aria-hidden="true">&#9728;</span><span id="app-title">SkyCast</span></a>
+        <span class="live-badge"><span></span> Live weather</span>
+      </header>
+      <form class="search" role="search">
+        <label class="sr-only" for="city-search">Search a city</label>
+        <input id="city-search" type="text" placeholder="Search city or region" autocomplete="off" spellcheck="false" required>
+        <button type="submit" aria-label="Search weather"><img src="images/search.png" alt=""></button>
+      </form>
+      <p class="error-message" role="alert" aria-live="polite"></p>
+      <div class="weather" aria-live="polite">
+        <div class="weather-visual"><span class="orb orb-one"></span><span class="orb orb-two"></span><span class="orb orb-three"></span><img src="images/rain.png" alt="Rainy weather" class="weather-icon"></div>
+        <p class="eyebrow">CURRENT WEATHER</p>
+        <h1 class="temp">36<span>&deg;</span></h1>
+        <h2 class="city">Sindoor</h2>
+        <p class="condition">Light rain</p>
+        <div class="details" aria-label="Weather details">
+          <article class="detail-card"><div class="detail-icon humidity-icon"><img src="images/humidity.png" alt=""></div><div><p class="humidity-value">50%</p><span>Humidity</span></div></article>
+          <article class="detail-card"><div class="detail-icon wind-icon"><img src="images/wind.png" alt=""></div><div><p class="wind-value">50 km/h</p><span>Wind speed</span></div></article>
+        </div>
+      </div>
+    </section>
+    <p class="footer-note">Plan your day with confidence <span aria-hidden="true">&#10022;</span></p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
